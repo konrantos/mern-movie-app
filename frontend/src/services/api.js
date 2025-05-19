@@ -3,7 +3,7 @@
 import axios from "axios";
 
 // Το API Key από το TMDB
-const API_KEY = "dc3eff0da5540affcac01719d9f75895";
+const API_KEY = "your-api-key";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 // Χρησιμοποιώ "en-US" αντί για "el-GR" επειδή σε πολλές ταινίες
