@@ -1,0 +1,207 @@
+.profile-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+}
+
+.profile-container h2 {
+  color: #e50914;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.profile-info {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.profile-info p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Νέα πρόοδος ανά Level */
+.progress-bar {
+  position: relative;
+  background-color: #444;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.next-level {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.preferences-section {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.preferences-section h3 {
+  font-size: 1.6rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.genre-button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #666;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.genre-button.selected {
+  background-color: #e50914;
+  border-color: #e50914;
+}
+
+.genre-button:hover {
+  background-color: #b00610;
+  border-color: #b00610;
+}
+
+.auth-button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover:not(:disabled) {
+  background-color: #ff1f1f;
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.save-message {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #4caf50;
+}
+
+@media (max-width: 768px) {
+  .genre-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .auth-button {
+    width: 100%;
+  }
+}
+
+.points-bonus {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+}
+
+.profile-info {
+  position: relative; 
+}
+
+.points-info {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  background: rgba(77, 36, 38, 0.9);
+  color: #ffffff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+
+.profile-container {
+  width: 95%;
+  max-width: 1300px; 
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .profile-info {
+    padding-top: 3rem; 
+  }
+  .points-info {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: none;
+  }
+  .genre-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+.preferences-box,
+.stats-box {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.preferences-box h3,
+.stats-box h3 {
+  font-size: 1.6rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .points-info {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

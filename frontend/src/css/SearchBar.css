@@ -1,0 +1,136 @@
+.search-form {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 1.2rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 4px #b00610;
+}
+
+.search-button,
+.filter-button {
+  padding: 1.2rem 2rem;
+  background-color: #b00610;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.search-button:hover,
+.filter-button:hover {
+  background-color: #b00610;
+  transform: scale(1.05);
+}
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.filter-select {
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #111;
+  color: white;
+  min-width: 180px;
+}
+
+.year-range-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  gap: 0.5rem;
+}
+
+.year-range-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.year-range-slider {
+  width: 180px;
+  appearance: none;
+  height: 6px;
+  background: #444;
+  border-radius: 5px;
+  outline: none;
+}
+
+.year-range-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #b00610;
+  cursor: pointer;
+}
+
+.filters-container .filter-button:last-of-type {
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .search-input,
+  .search-button,
+  .filter-button,
+  .filter-select,
+  .year-range-slider {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .year-range-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filters-container .filter-button:last-of-type {
+    margin-left: 0;
+  }
+}
