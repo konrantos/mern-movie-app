@@ -1,100 +1,99 @@
-# Κωνσταντίνος Ράντος – Α.Μ. 2565  
-## Ατομική Εργασία: Εφαρμογή Προβολής Ταινιών  
+# MERN Movie App — Fullstack Application
 
----
+> Course project for **Web Application and Database Development** (8th semester) — Department of Informatics and Telecommunications, University of Ioannina.
 
-## 📌 Εισαγωγή  
+## 📌 Description
 
-Η παρούσα εργασία έχει ως στόχο την ανάπτυξη μιας διαδραστικής διαδικτυακής εφαρμογής για την αναζήτηση και παρακολούθηση ταινιών. Ο χρήστης έχει τη δυνατότητα να δημιουργήσει λογαριασμό, να δει πληροφορίες για κάθε ταινία που επιθυμεί (όπως τίτλος, είδος, σύνοψη, βαθμολογία, trailer και ηθοποιοί), καθώς και να φιλτράρει τα αποτελέσματα με βάση το είδος, το έτος κυκλοφορίας και τη βαθμολογία. Επιπλέον, μπορεί να προσθέτει ταινίες στα αγαπημένα του, να αφήνει σχόλια και να παρακολουθεί την προσωπική του πρόοδο μέσω στατιστικών και πινάκων κατάταξης.  
+This is a fullstack movie web application built using the **MERN stack** (MongoDB, Express, React, Node.js).  
+It allows users to explore movies, manage favorites, leave comments, and gain XP through activity.
 
-Η εφαρμογή αντλεί δεδομένα από το **TMDB API**, ενώ ταυτόχρονα διαχειρίζεται εσωτερικά προφίλ χρηστών, σχόλια, αγαπημένες ταινίες και στατιστικά. Η εργασία βασίστηκε στο μοντέλο MERN (MongoDB, Express, React, Node.js), γεγονός που μου επέτρεψε να αποκτήσω εμπειρία στον συνδυασμό τεχνολογιών για την υλοποίηση μιας πλήρους εφαρμογής.
+⚠️ The majority of the code (variable names, comments, UI content) is written in **Greek**, in accordance with the course standards. No translation or refactoring is intended at this time.
 
----
+📚 A **fully documented project report in Greek**, including detailed explanations and screenshots of the application, is available at the following link:  
+👉 [Google Drive](https://drive.google.com/drive/folders/1-N0avUuM06oXvH_mqdB2v4IR1VKaCl3I?usp=drive_link)
 
-📸 *Η πλήρης τεκμηρίωση του έργου, μαζί με ενδεικτικά screenshots της εφαρμογής, είναι διαθέσιμη στον σύνδεσμο: [Google Drive](https://drive.google.com/drive/folders/1-N0avUuM06oXvH_mqdB2v4IR1VKaCl3I?usp=drive_link)*  
+## 🎯 Features
 
-## 📌 Τι υλοποιήθηκε ανά εβδομάδα κατά τη διάρκεια του εξαμήνου
+- 🔍 Search and browse movies from **TMDB API**
+- ⭐ Add movies to your **Favorites**
+- 💬 Comment on movies
+- 📊 User profile with XP, level, preferred genres
+- 🏆 Leaderboards (most comments, most points)
+- 🎮 Gamification: gain XP for every comment or favorite
+- 🔎 Filter movies by genre, rating, or year
+- 📺 Display of similar movies
+- 👤 Authentication: register, login, logout
+- 📱 Responsive UI (mobile & desktop)
 
-### ✅ Έως Δευτέρα 17/3
+## 🛠️ Technologies Used
 
-✔ `Αρχική σελίδα` με λίστα ταινιών από API  
-✔ `Σελίδα αγαπημένων` ταινιών με δυνατότητα προσθήκης/αφαίρεσης  
-✔ `Αναζήτηση ταινιών` με real-time ενημέρωση  
-✔ Απλό `Navbar` και `Footer` με responsive σχεδίαση  
+### Frontend
+- React.js
+- React Router
+- Axios
+- Recharts (for profile charts)
+- CSS3, responsive design
 
----
+### Backend
+- Node.js + Express
+- MongoDB (with Mongoose)
+- JWT for authentication (via HTTP-only cookies)
+- Bcrypt for password hashing
 
-### ✅ Έως Δευτέρα 24/3
+## 📁 Project Structure
 
-✔ Σελίδα `Movie Details` για κάθε ταινία με:  
-• πλήρεις πληροφορίες  
-• ενσωματωμένο YouTube trailer  
-• εμφάνιση ηθοποιών με εικόνες  
-• εμφάνιση background με overlay  
-• responsive σχεδίαση  
+```
+client/
+├── pages/
+├── components/
+├── contexts/
+├── services/
+└── App.jsx
 
-✔ Εμπλουτισμός και βελτιστοποίηση του UI όλων των προηγούμενων αρχείων  
-✔ Επίλυση διαφόρων bugs (κυρίως στην αναζήτηση)  
-✔ Επέκταση του API για επιπλέον πληροφορίες και μελλοντική χρήση  
+server/
+├── routes/
+├── models/
+├── middleware/
+├── db.js
+└── index.js
+```
 
----
+## ⚙️ How to Run
 
-### ✅ Έως Δευτέρα 31/3
+Clone and install both frontend and backend:
 
-✔ Προσθήκη δυναμικής εμφάνισης ειδών (genres) σε κάθε ταινία  
-✔ Δημιουργία νέας σελίδας `GenreMovies` για εμφάνιση ταινιών ανά κατηγορία  
-✔ Ενσωμάτωση κουμπιού επιλογής είδους στην αρχική, που οδηγεί στη σωστή κατηγορία  
+```bash
+git clone https://github.com/konrantos/mern-movie-app.git
+cd mern-movie-app
+```
 
----
+### Frontend
+```bash
+cd client
+npm install
+npm run dev
+```
 
-### ✅ Έως Δευτέρα 7/4
+### Backend
+```bash
+cd server
+npm install
+npm run start
+```
 
-✔ Βελτίωση του UI στη `Home` και στη `GenreMovies.jsx`  
-✔ Προσθήκη `παρόμοιων ταινιών` στο κάτω μέρος κάθε σελίδας ταινίας  
-✔ Εμφάνιση των `Top Rated` ταινιών στην αρχική σε ξεχωριστή ενότητα  
-✔ Εμφάνιση των `Προβάλλονται τώρα` ταινιών στην αρχική και στο Navbar  
-✔ Ενσωμάτωση του `TMDb rating` σε όλες τις ταινίες  
+Create a `.env` file in `server/` with:
+```
+MONGO_URI=your_mongodb_url
+JWT_SECRET=your_secret
+TMDB_API_KEY=your_tmdb_api_key
+```
 
-✔ Προσθήκη διαφόρων `carousel` μέσω της βιβλιοθήκης `react-slick` για προβολή:  
-• δημοφιλών ταινιών  
-• ταινιών ανά 4 βασικά είδη (Action, Comedy, Drama, Romance)  
-• ταινιών που προβάλλονται τώρα  
-• κορυφαίων διαχρονικά ταινιών  
+## 📝 License
 
----
+MIT License
 
-### ✅ Έως Δευτέρα 28/4
+## 📌 Notes
 
-✔ Έναρξη υλοποίησης του backend με χρήση `Node.js` και `MongoDB` με δημιουργία αντίστοιχου φακέλου backend  
-✔ Προσθήκη λειτουργίας `register` και `login` χρηστών  
-✔ Μεταφορά της λειτουργίας `αγαπημένων για κάθε χρήστη` μέσω ξεχωριστού πίνακα (collection) στη βάση δεδομένων  
-✔ Εισαγωγή `φίλτρων στην αναζήτηση ταινιών` (είδος, βαθμολογία, έτος κυκλοφορίας)
+- The application is fully functional and used as a final course project.
+- All deliverables, database schemas, screenshots and design choices are documented in Greek.
 
----
-
-### ✅ Έως Δευτέρα 5/5
-
-✔ Μεταφορά του login σε cookie‑based με JWT που το βάζουμε σε HTTP‑only cookie  
-✔ Προσθήκη συστήματος σχολιασμών σε κάθε ταινία  
-✔ Ενσωμάτωση στοιχείων παιχνιδοποίησης, με leaderboard σχολιαστών  
-
----
-
-### ✅ Έως Δευτέρα 12/5
-
-✔ Κρυπτογράφηση κωδικών με hashing (bcrypt)  
-✔ Δημιουργία προφίλ χρήστη (profiling) με αναλυτικά στατιστικά κάθε χρήστη  
-✔ Προσθήκη νέου στοιχείου παιχνιδοποίησης με συλλογή πόντων και levels με βάση την αλληλεπίδραση κάθε χρήστη  
-✔ Επιλογή αγαπημένων ειδών ταινιών στο προφίλ και αυτόματη ανανέωση των προτιμήσεων χρήστη  
-✔ Στατιστικά παρακολούθησης με βάση τις ταινίες που έχουν προστεθεί στα αγαπημένα καθ’ όλη τη χρήση  
-✔ Βελτιστοποίηση του σχήματος των πινάκων της βάσης δεδομένων  
-
----
-
-### ✅ Έως Δευτέρα 19/5
-
-✔ Βελτιστοποίηση του UI και γενικά όλου του κώδικα της εφαρμογής  
-✔ Συγγραφή πλήρους τεκμηρίωσης του έργου  
-✔ Προετοιμασία για την επερχόμενη παρουσίαση της εργασίας
-
----
