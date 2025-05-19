@@ -4,7 +4,7 @@
 
 ## 📌 Description
 
-This is a fullstack movie web application built using the **MERN stack** (MongoDB, Express, React, Node.js).  
+This is a fullstack movie web application built using the **MERN stack** (MongoDB, Express, React, Node.js) and TMDB API.  
 It allows users to explore movies, manage favorites, leave comments, and gain XP through activity.
 
 ⚠️ The majority of the code (variable names, comments, UI content) is written in **Greek**, in accordance with the course standards. No translation or refactoring is intended at this time.
@@ -93,7 +93,7 @@ TMDB_API_KEY=your_tmdb_api_key
 MIT License
 
 ## 📌 Notes
-
+- The application integrates data from both an external API (TMDB) and a custom backend.
 - The application is fully functional and used as a final course project.
 - All deliverables, database schemas, screenshots and design choices are documented in Greek.
 
